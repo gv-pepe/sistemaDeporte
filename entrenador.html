@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bienvenido Entrenador</title>
+    <link rel="stylesheet" href="jugador.css">
+    <!--Bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!--Bootstrap iconos-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+  </head>
+  <body>
+
+    <section class="p-3">
+
+        <div class="row">
+            <div class="col-12">
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#userForm">Agregar Nuevo Jugador <i class="bi bi-person-plus"></i></button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <table class="table table-striped table-hover mt-3 text-center table-bordered">
+                  <thead>
+                      <tr>
+                        <th>Id</th>
+                        <th>Foto</th>
+                        <th>Nombre</th>
+                        <th>Edad</th>
+                        <th>Equipo</th>
+                        <th>Usuario</th>
+                        <th>Contraseña</th>
+                        <th>Acciones</th>
+                      </tr>
+                  </thead>
+                  <tbody id="data">
+                      <td>1</td>
+                      <td><img src="taylor.jpg" alt="" width="50" height="50"></td>
+                      <td>Taylor Swift</td>
+                      <td>33</td>
+                      <td>Chivas</td>
+                      <td>taylor33</td>
+                      <td>travismipastor</td>
+                      <td> 
+                        
+                        <button class="btn btn-success"><i class="bi bi-eye"></i></button>
+                        <button class="btn btn-primary"><i class="bi bi-pen"></i></button>
+                        <button class="btn btn-danger"><i class="bi bi-trash"></i></button>
+
+                 
+
+                      </td>
+                      <td></td>
+                      <td></td>
+                  </tbody>
+                </table>
+            </div>
+        </div>
+
+    </section>
+
+    <!--Modal-->
+    <div class="modal fade" id="userForm">
+
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title">Llena el formulario</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+
+              <div class="modal-body">
+                <form action="#" id="myForm">
+                  <div class="card imgholder">
+                    <label form="imgInput" class="upload">
+                      <input type="file" name="" id="imgInput">
+                      <i class="bi bi-plus-circle"></i>
+                    </label>
+                    <img src="icono.png" alt="">
+                  </div>
+                </form>
+              </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="/js/jugador.js"></script>
+
+
+
+
+  </body>
+</html>
