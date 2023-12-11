@@ -1,7 +1,8 @@
 <?php include "../../php/iniciopages.php"; ?>
 
 <head>
-<link rel="stylesheet" href="modaliu.css">
+  
+  <link rel="stylesheet" href="modaliu.css">
 
 </head>
 
@@ -21,7 +22,7 @@
 
 
     <header class="site-navbar py-4" role="banner">
-    <div class="container">
+      <div class="container">
         <div class="d-flex align-items-center">
           <div class="site-logo">
             <a href="../../index.php">
@@ -29,9 +30,10 @@
             </a>
           </div>
           <div class="ml-auto">
-          <?php require_once("nav.php"); ?>
+            <?php require_once("nav.php"); ?>
 
-            <a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black float-right text-white"><span
+            <a href="#"
+              class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black float-right text-white"><span
                 class="icon-menu h3 text-white"></span></a>
           </div>
         </div>
@@ -42,7 +44,7 @@
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-9 mx-auto text-center">
-            <h1 class="text-white">Bitacora</h1>
+            <h1 class="text-white">Altas y Bajas</h1>
           </div>
         </div>
       </div>
@@ -52,6 +54,7 @@
       <div class="container">
         <div class="row">
           <div class="mb-4 d-flex align-items-center">
+
 
             <div class="modal fade-modal" id="alta" tabindex="-1" aria-labelledby="nuevoProyecto" aria-hidden="true">
               <div class="modal-dialog-modal" style="min-width: 75%;">
@@ -65,7 +68,7 @@
 
                   <div class="modal-body-modal">
                     <form method="post">
-                    <div class="form-group">
+                      <div class="form-group">
                         <label for="nombre">Nombre del Jugador</label>
                         <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre" required>
                       </div>
@@ -114,22 +117,24 @@
 
                   <div class="modal-body-modal">
                     <form method="post">
-                    <div class="form-group">
+                      <div class="form-group">
                         <label for="fecha">Fecha</label>
                         <input type="text" class="form-control" fecha="fecha" name="fecha" placeholder="Fecha" required>
                       </div>
                       <div class="form-group">
                         <label for="jugador">Jugador</label>
-                        <input type="text" class="form-control" id="jugador" name="jugador" placeholder="Jugador" required>
-                      </div>
-                      <div class="form-group">
-                        <label for="equipoanterior">Equipo Actual</label>
-                        <input type="text" class="form-control" id="equipoanterior" name="equipoanterior" placeholder="EquipoA"
+                        <input type="text" class="form-control" id="jugador" name="jugador" placeholder="Jugador"
                           required>
                       </div>
                       <div class="form-group">
+                        <label for="equipoanterior">Equipo Actual</label>
+                        <input type="text" class="form-control" id="equipoanterior" name="equipoanterior"
+                          placeholder="EquipoA" required>
+                      </div>
+                      <div class="form-group">
                         <label for="equiponuevo">Equipo a Cambiar</label>
-                        <input type="number" class="form-control" id="equiponuevo" name="equiponuevo" placeholder="EquipoNuevo" required>
+                        <input type="number" class="form-control" id="equiponuevo" name="equiponuevo"
+                          placeholder="EquipoNuevo" required>
                       </div>
                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
                       <button type="submit" class="btn btn-primary">Dar Baja</button>
@@ -188,19 +193,19 @@
             </tr>
           </thead>
           <tbody>
-          <?php
-        $altasbajas = VisualizarBitacoras();
-        foreach ($altasbajas as $bitacora) {
-            echo "<tr>";
-            echo "<td>{$bitacora['ID']}</td>";
-            echo "<td>{$bitacora['NombreJugador']}</td>";
-            echo "<td>{$bitacora['EquipoAntiguo']}</td>";
-            echo "<td>{$bitacora['EquipoNuevo']}</td>";
-            echo "<td>{$bitacora['IdEntrenador']}</td>";
-            echo "<td>{$bitacora['Motivo']}</td>";
-            echo "<td>{$bitacora['FechaHora']}</td>";
-        }
-        ?>
+            <?php
+            $altasbajas = VisualizarBitacoras();
+            foreach ($altasbajas as $bitacora) {
+              echo "<tr>";
+              echo "<td>{$bitacora['ID']}</td>";
+              echo "<td>{$bitacora['NombreJugador']}</td>";
+              echo "<td>{$bitacora['EquipoAntiguo']}</td>";
+              echo "<td>{$bitacora['EquipoNuevo']}</td>";
+              echo "<td>{$bitacora['IdEntrenador']}</td>";
+              echo "<td>{$bitacora['Motivo']}</td>";
+              echo "<td>{$bitacora['FechaHora']}</td>";
+            }
+            ?>
           </tbody>
         </table>
 
@@ -208,8 +213,6 @@
     </div>
   </div>
   </div>
-
-
 
 
   <footer class="footer-section">
@@ -285,6 +288,7 @@
       </div>
     </footer>
 
+
   </div>
   <!-- .site-wrap -->
   <script src="../../js/jquery-3.3.1.min.js"></script>
@@ -305,7 +309,8 @@
 
   <script src="../../js/main.js"></script>
   <?php
-  function insertarbitacora($bitacora)
+
+function insertarbitacora($bitacora)
   {
       try {
           $pdo = conexion();
@@ -324,6 +329,7 @@
           // Ejecutar la sentencia
           $stmt->execute();
   
+          // Mostrar modal de éxito
           echo "<script>$('#successModal').modal('show');</script>";
           VisualizarBitacoras();
           // mostrarbitacora();
@@ -350,29 +356,25 @@
   
 }
 
-function VisualizarBitacoras() {
-  $pdo = conexion();
-  try {
 
-    $sesion_id = file_get_contents("./../../Conexion/sesion_id.txt");
-      
-    $stmt = $pdo->prepare("SELECT * FROM bitacora WHERE idEntrenador = :sesion_id");
-    $stmt->bindParam(':sesion_id', $sesion_id, PDO::PARAM_STR); // Ajusta el tipo de dato según tus necesidades
-    $stmt->execute();
+  function VisualizarBitacoras()
+  {
+    $pdo = conexion();
+    try {
+      $sesion_id = file_get_contents("../../conexion/sesion_id.txt");
 
+      $stmt = $pdo->prepare("SELECT * FROM bitacora where idEntrenador = :sesion_id");
+      $stmt->bindParam(':sesion_id', $sesion_id, PDO::PARAM_STR); // Ajusta el tipo de dato según tus necesidades
+      $stmt->execute();
 
-    $stmt->execute();
-    return $stmt->fetchAll(PDO::FETCH_ASSOC);
-  } catch (PDOException $e) {
+      return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    } catch (PDOException $e) {
       echo "Error al obtener altasbajas: " . $e->getMessage();
       return [];
+    }
   }
-}
 
-//Hay que tomar en cuenta la logica con que pueda el entrenador cambiar a su jugador solo de su mismo equipo  y tambien
-//del cambio que solo sea de su mismo equipo
-
-?>
+  ?>
 </body>
 
 </html>

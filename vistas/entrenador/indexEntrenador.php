@@ -32,7 +32,7 @@
 
 <body>
 
-<div class="site-wrap">
+  <div class="site-wrap">
 
     <div class="site-mobile-menu site-navbar-target">
       <div class="site-mobile-menu-header">
@@ -45,8 +45,8 @@
 
 
     <header class="site-navbar py-4" role="banner">
-    <div class="container">
-        <div class="d-flex align-items-center">
+      <div class="container">
+        <div class="d-flex align-items-center" style="width:1100px;">
           <div class="site-logo">
             <a href="index.php">
               <img src="../../images/logo1.png" alt="Logo" width="90px">
@@ -75,17 +75,17 @@
       </div>
     </div>
 
-    
-    
+
+
     <div class="container">
-      
+
 
       <div class="row">
         <div class="col-lg-12">
-          
+
           <div class="d-flex team-vs">
             <span class="score">4-1</span>
-            <div class="team-1 w-50 "style="background-color: red;">
+            <div class="team-1 w-50 " style="background-color: red;">
               <div class="team-details w-100 text-center">
                 <img src="../../images/logo_francia.jpg" alt="Image" class="img-fluid">
                 <h3>Francia <span>(win)</span></h3>
@@ -97,7 +97,7 @@
                 </ul>
               </div>
             </div>
-            <div class="team-2 w-50"style="background-color: red;">
+            <div class="team-2 w-50" style="background-color: red;">
               <div class="team-details w-100 text-center">
                 <img src="../../images/logo_uruguay.png" alt="Image" class="img-fluid">
                 <h3>Uruguay <span>(loss)</span></h3>
@@ -110,7 +110,7 @@
         </div>
       </div>
     </div>
-  
+
 
     <div class="latest-news">
       <div class="container">
@@ -131,7 +131,7 @@
                   <div class="author d-flex align-items-center">
                   </div>
                 </div>
-              </div> 
+              </div>
             </div>
           </div>
           <div class="col-md-4">
@@ -145,7 +145,7 @@
                   <div class="author d-flex align-items-center">
                   </div>
                 </div>
-              </div> 
+              </div>
             </div>
           </div>
           <div class="col-md-4">
@@ -159,14 +159,14 @@
                   <div class="author d-flex align-items-center">
                   </div>
                 </div>
-              </div> 
+              </div>
             </div>
           </div>
         </div>
 
       </div>
     </div>
-    
+
     <div class="site-section bg-dark">
       <div class="container">
         <div class="row">
@@ -204,53 +204,136 @@
             </div>
           </div>
           <div class="col-lg-6">
-            
+
             <div class="widget-next-match">
-            <table class="table custom-table">
-  <thead>
-    <tr>
-      <th>POS</th>
-      <th>Equipos</th>
-      <th>Goles Totales</th> <!-- Added Total Goals column -->
-    </tr>
-  </thead>
-  <tbody>
-    <?php
-    $consulta = "CALL ObtenerTotalGolesPorEquipo()";
-    $conexion = conexion();
-    $resultado = $conexion->query($consulta);
+              <table class="table custom-table">
+                <thead>
+                  <tr>
+                    <th>POS</th>
+                    <th>Equipos</th>
+                    <th>J</th>
+                    <th>G</th>
+                    <th>P</th>
+                    <th>GF</th>
+                    <th>GC</th>
+                    <th>DIF</th>
+                    <th>PTS</th> <!-- Added Total Goals column -->
+                  </tr>
+                </thead>
+                <tbody>
+                  <?php
+                  $consulta = "CALL ObtenerTotalGolesPorEquipo()";
+                  $conexion = conexion();
+                  $resultado = $conexion->query($consulta);
 
-    $posicion = 1; // Added a counter for position
+                  $posicion = 1; // Added a counter for position
+                  
+                  while ($fila = $resultado->fetch(PDO::FETCH_ASSOC)) {
+                    echo "<tr>";
+                    echo "<td>{$posicion}</td>"; // Display position
+                    echo "<td>{$fila['NombreEquipo']}</td>";
+                    echo "<td>{$fila['TotalGoles']}</td>"; // Display total goals
+                    echo "<td>{$fila['ValorAleatorio1']}</td>";
+                    echo "<td>{$fila['ValorAleatorio2']}</td>";
+                    echo "<td>{$fila['ValorAleatorio3']}</td>";
+                    echo "<td>{$fila['ValorAleatorio4']}</td>";
+                    echo "<td>{$fila['ValorAleatorio5']}</td>";
+                    echo "<td>{$fila['ValorAleatorio6']}</td>";
+                    echo "</tr>";
 
-    while ($fila = $resultado->fetch(PDO::FETCH_ASSOC)) {
-      echo "<tr>";
-      echo "<td>{$posicion}</td>"; // Display position
-      echo "<td>{$fila['NombreEquipo']}</td>";
-      echo "<td>{$fila['TotalGoles']}</td>"; // Display total goals
-      echo "<td>{$fila['ValorAleatorio1']}</td>";
-      echo "<td>{$fila['ValorAleatorio2']}</td>";
-      echo "<td>{$fila['ValorAleatorio3']}</td>";
-      echo "<td>{$fila['ValorAleatorio4']}</td>";
-      echo "<td>{$fila['ValorAleatorio5']}</td>";
-      echo "<td>{$fila['ValorAleatorio6']}</td>";
-      echo "</tr>";
+                    $posicion++; // Increment position counter
+                  }
 
-      $posicion++; // Increment position counter
-    }
-
-    // Close the result set and connection
-    $resultado->closeCursor();
-    $conexion = null;
-    ?>
-  </tbody>
-</table>
+                  // Close the result set and connection
+                  $resultado->closeCursor();
+                  $conexion = null;
+                  ?>
+                </tbody>
+              </table>
 
             </div>
 
           </div>
         </div>
       </div>
-    </div> 
+    </div>
+
+
+    <footer class="footer-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3">
+            <div class="widget mb-3">
+              <h3>News</h3>
+              <ul class="list-unstyled links">
+                <li><a href="./../admin/indexAdministrador.php">Admin</a></li>
+                <li><a href="./../entrenador/indexEntrenador.php">Coach</a></li>
+                <li><a href="#">Media Center</a></li>
+                <li><a href="#">Video</a></li>
+                <li><a href="#">RSS</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="widget mb-3">
+              <h3>Tickets</h3>
+              <ul class="list-unstyled links">
+                <li><a href="#">Online Ticket</a></li>
+                <li><a href="#">Payment and Prices</a></li>
+                <li><a href="#">Contact &amp; Booking</a></li>
+                <li><a href="#">Tickets</a></li>
+                <li><a href="#">Coupon</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="widget mb-3">
+              <h3>Matches</h3>
+              <ul class="list-unstyled links">
+                <li><a href="#">Standings</a></li>
+                <li><a href="#">World Cup</a></li>
+                <li><a href="#">La Lega</a></li>
+                <li><a href="#">Hyper Cup</a></li>
+                <li><a href="#">World League</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-3">
+            <div class="widget mb-3">
+              <h3>Social</h3>
+              <ul class="list-unstyled links">
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Youtube</a></li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row text-center">
+          <div class="col-md-12">
+            <div class=" pt-5">
+              <p>
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                Copyright &copy;
+                <script>
+                  document.write(new Date().getFullYear());
+                </script> All rights reserved | This template is made with <i class="icon-heart"
+                  aria-hidden="true"></i>
+                by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </footer>
+
+
   </div>
   <!-- .site-wrap -->
 

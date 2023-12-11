@@ -46,12 +46,6 @@
 
 <body>
 
-<?php
-require_once("./../../Controladores/numeroVisitas.php");
-mostrarContenido("../../Controladores/ver.png", "../../conexion/conexion.php"); ?>
-
-
-
   <div class="site-wrap">
 
     <div class="site-mobile-menu site-navbar-target">
@@ -99,11 +93,11 @@ mostrarContenido("../../Controladores/ver.png", "../../conexion/conexion.php"); 
 
           <table class="table custom-table">
             <thead>
-            <thead>
-            <tr>
-                <th colspan="5">Enfretamientos </th>
-              </tr>
-            </thead>
+              <thead>
+                <tr>
+                  <th colspan="5">Enfretamientos </th>
+                </tr>
+              </thead>
             </thead>
             <tbody>
               <?php
@@ -152,7 +146,7 @@ mostrarContenido("../../Controladores/ver.png", "../../conexion/conexion.php"); 
                   echo "<tr>";
                   echo "<td colspan='8' style='font-weight: bold; $estiloFecha'>{$fila['Fecha']}</td>";
                   echo "</tr>";
-                  
+
                 }
               } else {
                 echo "<tr><td colspan='8'>Error al ejecutar el procedimiento almacenado: " . $conexion->errorInfo()[2] . "</td></tr>";
@@ -167,6 +161,80 @@ mostrarContenido("../../Controladores/ver.png", "../../conexion/conexion.php"); 
         </div>
       </div>
     </div>
+
+    <footer class="footer-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3">
+            <div class="widget mb-3">
+              <h3>News</h3>
+              <ul class="list-unstyled links">
+                <li><a href="./../admin/indexAdministrador.php">Admin</a></li>
+                <li><a href="./../entrenador/indexEntrenador.php">Coach</a></li>
+                <li><a href="#">Media Center</a></li>
+                <li><a href="#">Video</a></li>
+                <li><a href="#">RSS</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="widget mb-3">
+              <h3>Tickets</h3>
+              <ul class="list-unstyled links">
+                <li><a href="#">Online Ticket</a></li>
+                <li><a href="#">Payment and Prices</a></li>
+                <li><a href="#">Contact &amp; Booking</a></li>
+                <li><a href="#">Tickets</a></li>
+                <li><a href="#">Coupon</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="widget mb-3">
+              <h3>Matches</h3>
+              <ul class="list-unstyled links">
+                <li><a href="#">Standings</a></li>
+                <li><a href="#">World Cup</a></li>
+                <li><a href="#">La Lega</a></li>
+                <li><a href="#">Hyper Cup</a></li>
+                <li><a href="#">World League</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-3">
+            <div class="widget mb-3">
+              <h3>Social</h3>
+              <ul class="list-unstyled links">
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Youtube</a></li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row text-center">
+          <div class="col-md-12">
+            <div class=" pt-5">
+              <p>
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                Copyright &copy;
+                <script>
+                  document.write(new Date().getFullYear());
+                </script> All rights reserved | This template is made with <i class="icon-heart"
+                  aria-hidden="true"></i>
+                by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </footer>
   </div>
 
 

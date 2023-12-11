@@ -1,7 +1,7 @@
 <?php include "../../php/iniciopages.php"; ?>
 
 <head>
-  
+
   <link rel="stylesheet" href="modaliu.css">
 
 </head>
@@ -44,7 +44,7 @@
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-9 mx-auto text-center">
-            <h1 class="text-white">Altas y Bajas</h1>
+            <h1 class="text-white">Bitacora</h1>
           </div>
         </div>
       </div>
@@ -74,8 +74,8 @@
                       </div>
                       <div class="form-group">
                         <label for="equipoantiguo">Equipo Antiguo</label>
-                        <input type="text" class="form-control" id="equipoantiguo" name="equipoantiguo" placeholder="Equipo Antiguo"
-                          required>
+                        <input type="text" class="form-control" id="equipoantiguo" name="equipoantiguo"
+                          placeholder="Equipo Antiguo" required>
                       </div>
                       <div class="form-group">
                         <label for="equiponuevo">Equipo Nuevo</label>
@@ -89,13 +89,11 @@
                       </div>
                       <div class="form-group">
                         <label for="motivo">Motivo</label>
-                        <input type="text" class="form-control" id="motivo" name="motivo"
-                          placeholder="Motivo" required>
+                        <input type="text" class="form-control" id="motivo" name="motivo" placeholder="Motivo" required>
                       </div>
                       <div class="form-group">
                         <label for="fecha">Fecha</label>
-                        <input type="text" class="form-control" id="fecha" name="fecha"
-                          placeholder="Fecha" required>
+                        <input type="text" class="form-control" id="fecha" name="fecha" placeholder="Fecha" required>
                       </div>
                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
                       <button type="submit" class="btn btn-primary">Dar Alta</button>
@@ -146,8 +144,9 @@
             </div>
           </div>
           <div class="modal-dialog-success-success d-flex align-items-center">
-            <div class="modal fade-success" id="successModal" tabindex="1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered modal-dialog-success-success" >
+            <div class="modal fade-success" id="successModal" tabindex="1" role="dialog"
+              aria-labelledby="successModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered modal-dialog-success-success">
                 <div class="modal-content-success">
                   <div class="modal-header-success">
                     <h5 class="modal-title-success" id="successModalLabel">Éxito</h5>
@@ -155,31 +154,32 @@
                       <span aria-hidden="true">&times;</span>
                     </button>
                   </div>
-                <div class="modal-body-success">
-                  Jugador insertado con éxito
+                  <div class="modal-body-success">
+                    Jugador insertado con éxito
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        <div class="modal fade-error" id="errorModal" tabindex="1" role="dialog" aria-labelledby="errorModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered modal-dialog-error" >
-              <div class="modal-content-error">
-                <div class="modal-header-error">
-                  <h5 class="modal-title-error" id="errorModalLabel">Error</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body-error">
-                  Error al insertar jugador.
-                  Tenga en Cuenta que solo pueden estar 11 personas.
-                  Por favor, inténtalo de nuevo.
+            <div class="modal fade-error" id="errorModal" tabindex="1" role="dialog" aria-labelledby="errorModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered modal-dialog-error">
+                <div class="modal-content-error">
+                  <div class="modal-header-error">
+                    <h5 class="modal-title-error" id="errorModalLabel">Error</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body-error">
+                    Error al insertar jugador.
+                    Tenga en Cuenta que solo pueden estar 11 personas.
+                    Por favor, inténtalo de nuevo.
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
         <table class="table custom-table">
           <thead>
             <tr>
@@ -213,6 +213,82 @@
     </div>
   </div>
   </div>
+
+  <footer class="footer-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="widget mb-3">
+            <h3>News</h3>
+            <ul class="list-unstyled links">
+              <li><a href="./../admin/indexAdministrador.php">Admin</a></li>
+              <li><a href="./../entrenador/indexEntrenador.php">Coach</a></li>
+              <li><a href="#">Media Center</a></li>
+              <li><a href="#">Video</a></li>
+              <li><a href="#">RSS</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="widget mb-3">
+            <h3>Tickets</h3>
+            <ul class="list-unstyled links">
+              <li><a href="#">Online Ticket</a></li>
+              <li><a href="#">Payment and Prices</a></li>
+              <li><a href="#">Contact &amp; Booking</a></li>
+              <li><a href="#">Tickets</a></li>
+              <li><a href="#">Coupon</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="widget mb-3">
+            <h3>Matches</h3>
+            <ul class="list-unstyled links">
+              <li><a href="#">Standings</a></li>
+              <li><a href="#">World Cup</a></li>
+              <li><a href="#">La Lega</a></li>
+              <li><a href="#">Hyper Cup</a></li>
+              <li><a href="#">World League</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-3">
+          <div class="widget mb-3">
+            <h3>Social</h3>
+            <ul class="list-unstyled links">
+              <li><a href="#">Twitter</a></li>
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">Instagram</a></li>
+              <li><a href="#">Youtube</a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="row text-center">
+        <div class="col-md-12">
+          <div class=" pt-5">
+            <p>
+              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+              Copyright &copy;
+              <script>
+                document.write(new Date().getFullYear());
+              </script> All rights reserved | This template is made with <i class="icon-heart"
+                aria-hidden="true"></i>
+              by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+
   </div>
   <!-- .site-wrap -->
   <script src="../../js/jquery-3.3.1.min.js"></script>
@@ -234,51 +310,51 @@
   <script src="../../js/main.js"></script>
   <?php
 
-function insertarbitacora($bitacora)
+  function insertarbitacora($bitacora)
   {
-      try {
-          $pdo = conexion();
-  
-          // Preparar la sentencia SQL
-          $stmt = $pdo->prepare("INSERT INTO bitacora(NombreJugador, EquipoAntiguo, EquipoNuevo, IdEntrenador, Motivo, FechaHora) VALUES (:nombre,:equipoantiguo, :equiponuevo, :id_entrenador, :motivo, :fecha)");
-  
-          // Vincular los parámetros
-          $stmt->bindParam(":nombre", $bitacora->nombre);
-          $stmt->bindParam(":equipoantiguo", $bitacora->equipoa);
-          $stmt->bindParam(":equiponuevo", $bitacora->equipon);
-          $stmt->bindParam(":id_entrenador", $bitacora->ident);
-          $stmt->bindParam(":motivo", $bitacora->motivo);
-          $stmt->bindParam(":fecha", $bitacora->fecha);
-  
-          // Ejecutar la sentencia
-          $stmt->execute();
-  
-          // Mostrar modal de éxito
-          echo "<script>$('#successModal').modal('show');</script>";
-          VisualizarBitacoras();
-          // mostrarbitacora();
-      } catch (PDOException $e) {
-        echo "<script>$('#errorModal').modal('show');</script>";
-          echo "Error al insertar bitacora: " . $e->getMessage();
-      }
+    try {
+      $pdo = conexion();
+
+      // Preparar la sentencia SQL
+      $stmt = $pdo->prepare("INSERT INTO bitacora(NombreJugador, EquipoAntiguo, EquipoNuevo, IdEntrenador, Motivo, FechaHora) VALUES (:nombre,:equipoantiguo, :equiponuevo, :id_entrenador, :motivo, :fecha)");
+
+      // Vincular los parámetros
+      $stmt->bindParam(":nombre", $bitacora->nombre);
+      $stmt->bindParam(":equipoantiguo", $bitacora->equipoa);
+      $stmt->bindParam(":equiponuevo", $bitacora->equipon);
+      $stmt->bindParam(":id_entrenador", $bitacora->ident);
+      $stmt->bindParam(":motivo", $bitacora->motivo);
+      $stmt->bindParam(":fecha", $bitacora->fecha);
+
+      // Ejecutar la sentencia
+      $stmt->execute();
+
+      // Mostrar modal de éxito
+      echo "<script>$('#successModal').modal('show');</script>";
+      VisualizarBitacoras();
+      // mostrarbitacora();
+    } catch (PDOException $e) {
+      echo "<script>$('#errorModal').modal('show');</script>";
+      echo "Error al insertar bitacora: " . $e->getMessage();
+    }
   }
-  
+
   // Verificar si se enviaron datos
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
-      // Crear objeto bitacora
-      $bitacora = new stdClass();
-      $bitacora->nombre = isset($_POST['nombre']) ? $_POST['nombre'] : '';
-      $bitacora->equipon = isset($_POST['equiponuevo']) ? $_POST['equiponuevo'] : '';
-      $bitacora->equipoa = isset($_POST['equipoantiguo']) ? $_POST['equipoantiguo'] : '';
-      $bitacora->ident = isset($_POST['id_entrenador']) ? $_POST['id_entrenador'] : '';
-      $bitacora->motivo = isset($_POST['motivo']) ? $_POST['motivo'] : '';
-      $bitacora->fecha = isset($_POST['fecha']) ? $_POST['fecha'] : '';
-             
+    // Crear objeto bitacora
+    $bitacora = new stdClass();
+    $bitacora->nombre = isset($_POST['nombre']) ? $_POST['nombre'] : '';
+    $bitacora->equipon = isset($_POST['equiponuevo']) ? $_POST['equiponuevo'] : '';
+    $bitacora->equipoa = isset($_POST['equipoantiguo']) ? $_POST['equipoantiguo'] : '';
+    $bitacora->ident = isset($_POST['id_entrenador']) ? $_POST['id_entrenador'] : '';
+    $bitacora->motivo = isset($_POST['motivo']) ? $_POST['motivo'] : '';
+    $bitacora->fecha = isset($_POST['fecha']) ? $_POST['fecha'] : '';
 
-      // Insertar equipo
-      insertarbitacora($bitacora);
-  
-}
+
+    // Insertar equipo
+    insertarbitacora($bitacora);
+
+  }
 
 
   function VisualizarBitacoras()

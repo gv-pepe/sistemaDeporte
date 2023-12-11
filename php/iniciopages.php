@@ -11,7 +11,7 @@
 
   <link rel="stylesheet" href="../../fonts/icomoon/style.css">
 
-  <link rel="stylesheet" href="../../css/bootstrap/boos.css">
+  <link rel="stylesheet" href="../../css/bootstrap/bootstrap.css">
   <link rel="stylesheet" href="../../css/jquery-ui.css">
   <link rel="stylesheet" href="../../css/owl.carousel.min.css">
   <link rel="stylesheet" href="../../css/owl.theme.default.min.css">
