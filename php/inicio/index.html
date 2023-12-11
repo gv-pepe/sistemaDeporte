@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro</title>
+    <link rel="stylesheet" href="ess.css" />
+  </head>
+  <body>
+    <main>
+      <div class="contenedor__todo">
+        <div class="caja__trasera">
+          <div class="caja__trasera-login">
+            <h3>¿Ya tienes una cuenta?</h3>
+            <p>Inicia sesión para entrar en la página</p>
+            <button id="btn__iniciar-sesion">Iniciar Sesion</button>
+          </div>
+          <div class="caja__trasera-registrer">
+            <h3>¿Aun no tienes una cuenta?</h3>
+            <p>Registrate para que puedas inciar sesion</p>
+            <button id="btn__registrarse">Registrate</button>
+          </div>
+        </div>
+        <!--Formulario de login y registro-->
+        <div class="contenedor__login-registrer">
+          <!--Login-->
+          <form action="controladorInicioSesion.php" method="post" class="formulario__login">
+            <h2>Iniciar Sesion</h2>
+            <input type="text" name="correo" placeholder="Correo Electronico o usuario" />
+            <input type="password" name="contrasena" placeholder="Contraseña" />
+            <button type="submit">Entrar</button>
+        </form>
+        
+          <!--Registro-->
+          <form action="controladorRegistro.php" method="post" class="formulario__registrer">
+            <h2>Registrarse</h2>
+            <input type="text" name="nombre" placeholder="Nombre Completo" />
+            <input type="text" name="correo" placeholder="Correo Electronico" />
+            <input type="text" name="usuario" placeholder="Usuario" />
+            <input type="password" name="contrasena" placeholder="Contraseña" />
+        
+            <!--Roles-->
+            <div class="selector-rol">
+                <select id="rol" name="rol" class="rol-dropdown">
+                    <option value="">Selecciona un rol</option>
+                    <option value="entrenador">Entrenador</option>
+                    <option value="administrador">Administrador</option>
+                </select>
+            </div>
+        
+            <input type="hidden" name="registro" value="1">
+        
+            <button type="submit">Registrarse</button>
+        </form>
+        
+        </div>
+      </div>
+    </main>
+    <script src="scripts.js"></script>  
+  </body>
+</html>

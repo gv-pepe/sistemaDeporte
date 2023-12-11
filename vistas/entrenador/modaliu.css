@@ -1,0 +1,161 @@
+/* Estilo para el modal de seguimiento */
+.modal.fade-modal .modal-dialog-modal {
+    max-width: 80%; /* Ancho máximo del modal */
+    margin: 20px auto; /* Centrar horizontal y verticalmente */
+    border: 1px solid #3498db; /* Borde del modal */
+    border-radius: 10px; /* Borde redondeado */
+    background-color: #2c3e50; /* Fondo del modal */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+.modal.fade-modal .modal-content-modal {
+    background-color: #2c3e50; /* Fondo del modal */
+    color: white; /* Color del texto del modal */
+}
+
+.modal.fade-modal .modal-title-modal {
+    color: white; /* Color del título del modal */
+    padding: 15px; /* Espaciado interno en el título */
+    background-color: #3498db; /* Color de fondo del título */
+    border-top-left-radius: 10px; /* Borde redondeado en la esquina superior izquierda del título */
+    border-top-right-radius: 10px; /* Borde redondeado en la esquina superior derecha del título */
+}
+
+.modal.fade-modal .modal-header-modal button.close {
+    color: white; /* Color del botón de cerrar */
+    width: 90px;
+}
+
+.modal.fade-modal .modal-body-modal {
+    padding: 15px; /* Espaciado interno en el cuerpo del modal */
+}
+
+.modal.fade-modal .form-group {
+    margin-bottom: 15px; /* Espaciado inferior entre los elementos del formulario */
+}
+
+.modal.fade-modal .modal-footer button {
+    background-color: #3498db; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    border: none; /* Sin borde en el botón */
+    border-radius: 5px; /* Borde redondeado en el botón */
+    padding: 7px 10px; /* Espaciado interno en el botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+/* Estilo para el fondo del modal */
+.modal.fade-modal .modal-backdrop {
+    background-color: #2c3e50; /* Fondo del modal cuando está activo */
+}
+
+
+/* Estilo para el modal de éxito */
+.modal.fade-success .modal-dialog-success-success {
+    width: 60%; /* Ancho máximo del modal */
+    margin: center; /* Centrar horizontalmente */
+    border-radius: 10px; /* Borde redondeado */
+}
+
+.modal.fade-success .modal-content-success {
+    background-color: #28a745; /* Fondo del modal de éxito */
+    color: white; /* Color del texto del modal de éxito */
+    border: 1px solid #218838; /* Borde del modal de éxito */
+    border-radius: 18px; /* Borde redondeado */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+    margin: 30px;
+}
+
+.modal.fade-success .modal-title-success {
+    color: white; /* Color del título del modal de éxito */
+    padding: 10px; /* Espaciado interno en el título */
+    margin: auto;
+    background-color: #218838; /* Color de fondo del título */
+    border-top-left-radius: 10px; /* Borde redondeado en la esquina superior izquierda del título */
+    border-top-right-radius: 10px; /* Borde redondeado en la esquina superior derecha del título */
+}
+
+.modal.fade-success .modal-body-success,
+.modal.fade-success .modal-footer-success {
+    border-top: 1px solid #218838; /* Borde superior del cuerpo y el pie del modal de éxito */
+}
+
+.modal.fade-success .modal-body-success {
+    padding: 15px; /* Espaciado interno en el cuerpo del modal */
+    margin: 90px;
+}
+
+.modal.fade-success .modal-footer-success button {
+    background-color: #218838; /* Color de fondo del botón de éxito */
+    color: white; /* Color del texto del botón de éxito */
+    border: none; /* Sin borde en el botón */
+    border-radius: 5px; /* Borde redondeado en el botón */
+    padding: 8px 15px; /* Espaciado interno en el botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+/* Estilo para el botón de cerrar del modal de éxito */
+.modal.fade-success .modal-header-success button.close {
+    color: white; /* Color del botón de cerrar del modal de éxito */
+}
+
+/* Ajuste para el fondo del modal de éxito */
+.modal.fade-success .modal-backdrop {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente del modal de éxito cuando está activo */
+}
+
+  
+/* Estilo para el modal de error */
+.modal.fade-error .modal-dialog-error {
+    width: 30%; /* Ancho máximo del modal */
+    margin: 20px auto; /* Centrar horizontal y verticalmente */
+    border-radius: 10px; /* Borde redondeado */
+}
+
+.modal.fade-error .modal-content-error {
+    background-color: #dc3545; /* Fondo del modal de error */
+    color: white; /* Color del texto del modal de error */
+}
+
+.modal.fade-error .modal-dialog-centered {
+    height: 120px; /* Altura absoluta del modal */
+}
+
+.modal.fade-error .modal-title-error {
+    color: white; /* Color del título del modal de error */
+    padding: 15px; /* Espaciado interno en el título */
+    background-color: #c82333; /* Color de fondo del título */
+    border-top-left-radius: 10px; /* Borde redondeado en la esquina superior izquierda del título */
+    border-top-right-radius: 10px; /* Borde redondeado en la esquina superior derecha del título */
+}
+
+.modal.fade-error .modal-body-error,
+.modal.fade-error .modal-footer-error {
+    border-top: 1px solid #c82333; /* Borde superior del cuerpo y el pie del modal de error */
+}
+
+.modal.fade-error .modal-body-error {
+    padding: 15px; /* Espaciado interno en el cuerpo del modal */
+}
+
+.modal.fade-error .modal-footer-error button {
+    background-color: #c82333; /* Color de fondo del botón de error */
+    color: white; /* Color del texto del botón de error */
+    border: none; /* Sin borde en el botón */
+    border-radius: 5px; /* Borde redondeado en el botón */
+    padding: 8px 15px; /* Espaciado interno en el botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+/* Estilo para el botón de cerrar del modal de error */
+.modal.fade-error .modal-header-error button.close {
+    color: white; /* Color del botón de cerrar del modal de error */
+}
+
+/* Ajuste para el fondo del modal de error */
+.modal.fade-error .modal-backdrop {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente del modal de error cuando está activo */
+}
+
+
+
+  
